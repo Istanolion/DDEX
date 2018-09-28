@@ -1,5 +1,5 @@
 Flow report for EX1
-Thu Sep 27 19:18:56 2018
+Fri Sep 28 11:47:02 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 27 19:18:56 2018       ;
+; Flow Status                        ; Successful - Fri Sep 28 11:47:02 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; EX1                                         ;
-; Top-level Entity Name              ; CA2                                         ;
+; Top-level Entity Name              ; NOTF                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08SAU169C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2                                           ;
-;     Total combinational functions  ; 2                                           ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 6                                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/27/2018 19:18:45 ;
+; Start date & time ; 09/28/2018 11:46:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EX1                 ;
 +-------------------+---------------------+
@@ -77,14 +77,24 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 247207020255681.153809392511096        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 18129493736102.153815317208264         ; --            ; --          ; --         ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; CA2         ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; CA2         ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; CA2         ; Top        ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 3.0V                                   ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; NOTF        ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; NOTF        ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; NOTF        ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%         ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; CA2                                    ; EX1           ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; NOTF                                   ; EX1           ; --          ; --         ;
+; VCCA_USER_VOLTAGE                   ; 3.3V                                   ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
@@ -93,8 +103,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4795 MB             ; 00:00:22                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:22                           ;
+; Analysis & Synthesis ; 00:00:48     ; 1.0                     ; 4813 MB             ; 00:01:02                           ;
+; Total                ; 00:00:48     ; --                      ; --                  ; 00:01:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,7 +113,7 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-9G3RS9N  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

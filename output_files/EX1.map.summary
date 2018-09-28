@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Sep 27 19:18:56 2018
+Analysis & Synthesis Status : Successful - Fri Sep 28 11:47:02 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : EX1
-Top-level Entity Name : CA2
+Top-level Entity Name : NOTF
 Family : MAX 10
-Total logic elements : 2
-    Total combinational functions : 2
+Total logic elements : 0
+    Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 6

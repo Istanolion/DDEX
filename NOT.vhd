@@ -11,7 +11,7 @@ END CA2;
 
 ARCHITECTURE BEHAVORIAL OF CA2 IS
 	BEGIN
-		S(2)<=A(2);
-		S(1)<=A(2) XOR A(1);
-		S(0)<=(NOT(A(0)) AND (A(1) OR a(2))) OR (A(0) AND NOT(A(1)) AND NOT(A(2)));
+		S(2)<=NOT(A(2));
+		S(1)<=NOT(A(1));
+		S(0)<=NOT(A(0));
 END BEHAVORIAL;
