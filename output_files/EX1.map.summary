@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Sep 28 19:58:09 2018
+Analysis & Synthesis Status : Successful - Fri Sep 28 20:18:26 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : EX1
-Top-level Entity Name : sUMADOR
+Top-level Entity Name : RESTADOR
 Family : MAX 10
-Total logic elements : 5
-    Total combinational functions : 5
+Total logic elements : 6
+    Total combinational functions : 6
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 10

@@ -1,5 +1,5 @@
 Flow report for EX1
-Fri Sep 28 20:06:46 2018
+Fri Sep 28 20:19:07 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 28 20:06:46 2018       ;
+; Flow Status                        ; Successful - Fri Sep 28 20:19:07 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; EX1                                         ;
-; Top-level Entity Name              ; sUMADOR                                     ;
+; Top-level Entity Name              ; RESTADOR                                    ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08SAU169C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5                                           ;
-;     Total combinational functions  ; 5                                           ;
+; Total logic elements               ; 6                                           ;
+;     Total combinational functions  ; 6                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 10                                          ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/28/2018 19:57:58 ;
+; Start date & time ; 09/28/2018 20:18:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EX1                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 247207020255681.153818267700976        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 247207020255681.153818389608476        ; --            ; --          ; --         ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
@@ -86,14 +86,14 @@ refer to the applicable agreement for further details.
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; SUMADOR     ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; SUMADOR     ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; SUMADOR     ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; RESTADOR    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; RESTADOR    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; RESTADOR    ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%         ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; SUMADOR                                ; EX1           ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; RESTADOR                               ; EX1           ; --          ; --         ;
 ; VCCA_USER_VOLTAGE                   ; 3.3V                                   ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -103,15 +103,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4787 MB             ; 00:00:21                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4639 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4784 MB             ; 00:00:22                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,11 +118,6 @@ refer to the applicable agreement for further details.
 ; Analysis & Synthesis ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -135,11 +125,6 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off EX1 -c EX1
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf --testbench_file=C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf --testbench_file=C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf --testbench_file=C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf --testbench_file=Z:/Istanolion/Documents/GitHub/DDEX/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf --testbench_file=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/Waveform1.vwf.vht
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/Waveform1.vwf --testbench_file=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/Waveform1.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/ EX1 -c EX1
 

@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/28/2018 20:06:45"
+-- Generated on "09/28/2018 20:19:06"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          sUMADOR
+-- Vhdl Test Bench(with test vectors) for design  :          RESTADOR
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,15 +28,15 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY sUMADOR_vhd_vec_tst IS
-END sUMADOR_vhd_vec_tst;
-ARCHITECTURE sUMADOR_arch OF sUMADOR_vhd_vec_tst IS
+ENTITY RESTADOR_vhd_vec_tst IS
+END RESTADOR_vhd_vec_tst;
+ARCHITECTURE RESTADOR_arch OF RESTADOR_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL A : STD_LOGIC_VECTOR(0 TO 2);
 SIGNAL B : STD_LOGIC_VECTOR(0 TO 2);
 SIGNAL S : STD_LOGIC_VECTOR(0 TO 3);
-COMPONENT sUMADOR
+COMPONENT RESTADOR
 	PORT (
 	A : IN STD_LOGIC_VECTOR(0 TO 2);
 	B : IN STD_LOGIC_VECTOR(0 TO 2);
@@ -44,7 +44,7 @@ COMPONENT sUMADOR
 	);
 END COMPONENT;
 BEGIN
-	i1 : sUMADOR
+	i1 : RESTADOR
 	PORT MAP (
 -- list connections between master ports and signals
 	A => A,
@@ -121,4 +121,4 @@ BEGIN
 	B(0) <= '0';
 WAIT;
 END PROCESS t_prcs_B_0;
-END sUMADOR_arch;
+END RESTADOR_arch;
