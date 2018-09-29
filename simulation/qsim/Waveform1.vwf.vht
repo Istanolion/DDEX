@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/28/2018 10:29:57"
+-- Generated on "09/28/2018 20:06:45"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          comparador
+-- Vhdl Test Bench(with test vectors) for design  :          sUMADOR
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,28 +28,28 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY comparador_vhd_vec_tst IS
-END comparador_vhd_vec_tst;
-ARCHITECTURE comparador_arch OF comparador_vhd_vec_tst IS
+ENTITY sUMADOR_vhd_vec_tst IS
+END sUMADOR_vhd_vec_tst;
+ARCHITECTURE sUMADOR_arch OF sUMADOR_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL A : STD_LOGIC_VECTOR(0 TO 2);
 SIGNAL B : STD_LOGIC_VECTOR(0 TO 2);
-SIGNAL salida : STD_LOGIC;
-COMPONENT comparador
+SIGNAL S : STD_LOGIC_VECTOR(0 TO 3);
+COMPONENT sUMADOR
 	PORT (
 	A : IN STD_LOGIC_VECTOR(0 TO 2);
 	B : IN STD_LOGIC_VECTOR(0 TO 2);
-	salida : OUT STD_LOGIC
+	S : OUT STD_LOGIC_VECTOR(0 TO 3)
 	);
 END COMPONENT;
 BEGIN
-	i1 : comparador
+	i1 : sUMADOR
 	PORT MAP (
 -- list connections between master ports and signals
 	A => A,
 	B => B,
-	salida => salida
+	S => S
 	);
 -- A[2]
 t_prcs_A_2: PROCESS
@@ -59,7 +59,7 @@ LOOP
 	WAIT FOR 10000 ps;
 	A(2) <= '1';
 	WAIT FOR 10000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_A_2;
 -- A[1]
@@ -70,38 +70,55 @@ LOOP
 	WAIT FOR 20000 ps;
 	A(1) <= '1';
 	WAIT FOR 20000 ps;
-	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_A_1;
 -- A[0]
 t_prcs_A_0: PROCESS
 BEGIN
-	FOR i IN 1 TO 12
-	LOOP
-		A(0) <= '0';
-		WAIT FOR 40000 ps;
-		A(0) <= '1';
-		WAIT FOR 40000 ps;
-	END LOOP;
+LOOP
 	A(0) <= '0';
-WAIT;
+	WAIT FOR 40000 ps;
+	A(0) <= '1';
+	WAIT FOR 40000 ps;
+	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_A_0;
 -- B[2]
 t_prcs_B_2: PROCESS
 BEGIN
+LOOP
+	B(2) <= '0';
+	WAIT FOR 80000 ps;
 	B(2) <= '1';
-WAIT;
+	WAIT FOR 80000 ps;
+	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_B_2;
 -- B[1]
 t_prcs_B_1: PROCESS
 BEGIN
+	FOR i IN 1 TO 12
+	LOOP
+		B(1) <= '0';
+		WAIT FOR 160000 ps;
+		B(1) <= '1';
+		WAIT FOR 160000 ps;
+	END LOOP;
 	B(1) <= '0';
 WAIT;
 END PROCESS t_prcs_B_1;
 -- B[0]
 t_prcs_B_0: PROCESS
 BEGIN
-	B(0) <= '1';
+	FOR i IN 1 TO 6
+	LOOP
+		B(0) <= '0';
+		WAIT FOR 320000 ps;
+		B(0) <= '1';
+		WAIT FOR 320000 ps;
+	END LOOP;
+	B(0) <= '0';
 WAIT;
 END PROCESS t_prcs_B_0;
-END comparador_arch;
+END sUMADOR_arch;

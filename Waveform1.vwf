@@ -1,16 +1,16 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source="C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf" --testbench_file="C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/Waveform1.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source="C:/Users/akuma/Documents/GitHub/DDEX/Waveform1.vwf" --testbench_file="C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/Waveform1.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/" EX1 -c EX1</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/akuma/Documents/GitHub/DDEX/simulation/qsim/" EX1 -c EX1</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source="Z:/Istanolion/Documents/GitHub/DDEX/DDEX/Waveform1.vwf" --testbench_file="Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/Waveform1.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source="Z:/Istanolion/Documents/GitHub/DDEX/DDEX/Waveform1.vwf" --testbench_file="Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/Waveform1.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/" EX1 -c EX1</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/" EX1 -c EX1</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work EX1.vho
 vcom -work work Waveform1.vwf.vht
-vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.comparador_vhd_vec_tst
+vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.SUMADOR_vhd_vec_tst
 vcd file -direction EX1.msim.vcd
-vcd add -internal comparador_vhd_vec_tst/*
-vcd add -internal comparador_vhd_vec_tst/i1/*
+vcd add -internal SUMADOR_vhd_vec_tst/*
+vcd add -internal SUMADOR_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -25,10 +25,10 @@ quit -f
 vlib work
 vcom -work work EX1.vho
 vcom -work work Waveform1.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax comparador_vhd_vec_tst/i1=EX1_vhd.sdo -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.comparador_vhd_vec_tst
+vsim -novopt -c -t 1ps -sdfmax SUMADOR_vhd_vec_tst/i1=EX1_vhd.sdo -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.SUMADOR_vhd_vec_tst
 vcd file -direction EX1.msim.vcd
-vcd add -internal comparador_vhd_vec_tst/*
-vcd add -internal comparador_vhd_vec_tst/i1/*
+vcd add -internal SUMADOR_vhd_vec_tst/*
+vcd add -internal SUMADOR_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -68,7 +68,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 1000.0;
+	DATA_DURATION = 4000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -155,14 +155,54 @@ SIGNAL("B[0]")
 	PARENT = "B";
 }
 
-SIGNAL("salida")
+SIGNAL("S")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("S[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "";
+	PARENT = "S";
+}
+
+SIGNAL("S[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "S";
+}
+
+SIGNAL("S[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "S";
+}
+
+SIGNAL("S[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "S";
 }
 
 TRANSITION_LIST("A[2]")
@@ -172,7 +212,7 @@ TRANSITION_LIST("A[2]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
+			REPEAT = 200;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -186,7 +226,7 @@ TRANSITION_LIST("A[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 25;
+			REPEAT = 100;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -200,11 +240,10 @@ TRANSITION_LIST("A[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 12;
+			REPEAT = 50;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -213,7 +252,12 @@ TRANSITION_LIST("B[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 25;
+			LEVEL 0 FOR 80.0;
+			LEVEL 1 FOR 80.0;
+		}
 	}
 }
 
@@ -222,7 +266,13 @@ TRANSITION_LIST("B[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 160.0;
+			LEVEL 1 FOR 160.0;
+		}
+		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -231,16 +281,53 @@ TRANSITION_LIST("B[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 0 FOR 320.0;
+			LEVEL 1 FOR 320.0;
+		}
+		LEVEL 0 FOR 160.0;
 	}
 }
 
-TRANSITION_LIST("salida")
+TRANSITION_LIST("S[3]")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 3001.0;
+	}
+}
+
+TRANSITION_LIST("S[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 3001.0;
+	}
+}
+
+TRANSITION_LIST("S[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 3001.0;
+	}
+}
+
+TRANSITION_LIST("S[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 999.0;
+		LEVEL 0 FOR 3001.0;
 	}
 }
 
@@ -326,11 +413,52 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "salida";
+	CHANNEL = "S";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;
 	TREE_LEVEL = 0;
+	CHILDREN = 9, 10, 11, 12;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "S[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 8;
 }
 
 TIME_BAR

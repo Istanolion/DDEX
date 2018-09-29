@@ -2,10 +2,10 @@ onerror {exit -code 1}
 vlib work
 vcom -work work EX1.vho
 vcom -work work Waveform1.vwf.vht
-vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.comparador_vhd_vec_tst
+vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.SUMADOR_vhd_vec_tst
 vcd file -direction EX1.msim.vcd
-vcd add -internal comparador_vhd_vec_tst/*
-vcd add -internal comparador_vhd_vec_tst/i1/*
+vcd add -internal SUMADOR_vhd_vec_tst/*
+vcd add -internal SUMADOR_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {

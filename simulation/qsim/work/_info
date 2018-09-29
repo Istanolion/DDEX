@@ -79,7 +79,7 @@ R16
 Acomparador_arch
 R5
 R6
-Z22 DEx4 work 22 comparador_vhd_vec_tst 0 22 LjU>WfaW89JE5X9TSfYTZ3
+DEx4 work 22 comparador_vhd_vec_tst 0 22 LjU>WfaW89JE5X9TSfYTZ3
 l46
 L33
 VS>=?^K:VPf2h6g449=1oI3
@@ -89,6 +89,92 @@ R10
 R11
 !i10b 1
 R12
+R20
+R21
+!i113 1
+R15
+R16
+Esumador
+Z22 w1538183206
+R2
+R3
+R4
+R5
+R6
+R7
+Z23 dZ:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim
+R8
+R9
+l0
+L34
+VCc>?YB_Xg4Y_Qhab1J1V;3
+!s100 REoXmiBCXCNXLc75TM=;E2
+R10
+32
+Z24 !s110 1538183211
+!i10b 1
+Z25 !s108 1538183211.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 sumador 0 22 Cc>?YB_Xg4Y_Qhab1J1V;3
+l71
+L42
+VzS3RdH?JR4mdlfj1[=VZb3
+!s100 ^6Nj_EBHm@3zhB=E7Bf`=0
+R10
+32
+R24
+!i10b 1
+R25
+R13
+R14
+!i113 1
+R15
+R16
+Esumador_vhd_vec_tst
+Z26 w1538183205
+R5
+R6
+R23
+R18
+R19
+l0
+L31
+V`END@o4F5JUcY0I9<BbFR1
+!s100 7hz0C1B38YKNPKD0^Q^];0
+R10
+32
+R24
+!i10b 1
+R25
+R20
+R21
+!i113 1
+R15
+R16
+Asumador_arch
+R5
+R6
+DEx4 work 19 sumador_vhd_vec_tst 0 22 `END@o4F5JUcY0I9<BbFR1
+l46
+L33
+VakM9;Ii@YgPO@IjfYDcRb2
+!s100 02jMUfjJk>eZc0`i;1F4X3
+R10
+32
+R24
+!i10b 1
+R25
 R20
 R21
 !i113 1
