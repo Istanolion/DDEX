@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M08SAU169C8G
-set_global_assignment -name TOP_LEVEL_ENTITY RESTADOR
+set_global_assignment -name TOP_LEVEL_ENTITY PRIN
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:39:46  SEPTEMBER 27, 2018"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
@@ -66,10 +66,44 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VHDL_FILE NOTF.vhd
 set_global_assignment -name VHDL_FILE SUMADOR.vhd
 set_global_assignment -name VHDL_FILE RESTADOR.vhd
+set_global_assignment -name VHDL_FILE FAND.vhd
+set_global_assignment -name VHDL_FILE FXOR.vhd
+set_global_assignment -name BDF_FILE HA.bdf
+set_global_assignment -name BDF_FILE FA.bdf
+set_global_assignment -name BDF_FILE MULTIPLICADOR.bdf
+set_global_assignment -name VHDL_FILE MULTPRIN.vhd
+set_global_assignment -name VHDL_FILE MUXAB.vhd
+set_global_assignment -name VHDL_FILE CHANGEBUT.vhd
+set_global_assignment -name BDF_FILE PRIN.bdf
+set_global_assignment -name VHDL_FILE FTOVECT.vhd
+set_global_assignment -name VHDL_FILE TTOVECT.vhd
+set_global_assignment -name VHDL_FILE clock.vhd
+set_global_assignment -name VHDL_FILE superif.vhd
+set_global_assignment -name VHDL_FILE muxbcd.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_E1 -to A0
+set_location_assignment PIN_C2 -to A1
+set_location_assignment PIN_C1 -to A2
+set_location_assignment PIN_D1 -to B0
+set_location_assignment PIN_E3 -to B1
+set_location_assignment PIN_F1 -to B2
+set_location_assignment PIN_E4 -to S0
+set_location_assignment PIN_H8 -to S1
+set_location_assignment PIN_K10 -to S2
+set_location_assignment PIN_H5 -to BUTTON
+set_location_assignment PIN_H4 -to A
+set_location_assignment PIN_J1 -to B
+set_location_assignment PIN_J2 -to F
+set_location_assignment PIN_L12 -to G
+set_location_assignment PIN_J12 -to C
+set_location_assignment PIN_J13 -to D
+set_location_assignment PIN_K11 -to E
+set_location_assignment PIN_A8 -to LED0
+set_global_assignment -name VHDL_FILE vecttofo.vhd
+set_global_assignment -name BDF_FILE sumas.bdf
+set_global_assignment -name VHDL_FILE fotovect.vhd
+set_location_assignment PIN_D8 -to ledcomp
+set_location_assignment PIN_K12 -to minusled
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name VHDL_FILE FAND.vhd
-set_global_assignment -name VHDL_FILE FXOR.vhd
-set_global_assignment -name VHDL_FILE "MULTIPLICADOR,MAYBE.vhd"

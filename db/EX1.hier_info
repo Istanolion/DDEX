@@ -1,4 +1,634 @@
-|RESTADOR
+|PRIN
+A <= 7448:inst16.OA
+A0 => TTOVECT:inst11.A
+A0 => MULTIPLICADOR:inst4.A0
+A0 => sumas:inst19.a0
+A1 => TTOVECT:inst11.B
+A1 => MULTIPLICADOR:inst4.A1
+A1 => sumas:inst19.a1
+A2 => TTOVECT:inst11.C
+A2 => MULTIPLICADOR:inst4.A2
+A2 => sumas:inst19.a2
+B0 => TTOVECT:inst12.A
+B0 => MULTIPLICADOR:inst4.B0
+B0 => sumas:inst19.b0
+B1 => TTOVECT:inst12.B
+B1 => MULTIPLICADOR:inst4.B1
+B1 => sumas:inst19.b1
+B2 => TTOVECT:inst12.C
+B2 => MULTIPLICADOR:inst4.B2
+B2 => sumas:inst19.b2
+BUTTON => CHANGEBUT:inst1.D0
+S0 => TTOVECT:inst17.A
+S1 => TTOVECT:inst17.B
+S2 => TTOVECT:inst17.C
+B <= 7448:inst16.OB
+C <= 7448:inst16.OC
+D <= 7448:inst16.OD
+E <= 7448:inst16.OE
+F <= 7448:inst16.OF
+G <= 7448:inst16.OG
+ledcomp <= superif:inst18.ledcomp
+minusled <= superif:inst18.minusled
+LED0 <= MUXAB:inst13.led
+
+
+|PRIN|7448:inst16
+OA <= 69.DB_MAX_OUTPUT_PORT_TYPE
+B => 27.IN0
+LTN => 27.IN1
+LTN => 25.IN1
+LTN => 29.IN1
+LTN => 13.IN5
+LTN => 38.IN3
+BIN => 37.IN0
+C => 25.IN0
+D => 14.IN0
+A => 29.IN0
+RBIN => 15.IN0
+OB <= 68.DB_MAX_OUTPUT_PORT_TYPE
+OC <= 70.DB_MAX_OUTPUT_PORT_TYPE
+OD <= 67.DB_MAX_OUTPUT_PORT_TYPE
+RBON <= 13.DB_MAX_OUTPUT_PORT_TYPE
+OE <= 71.DB_MAX_OUTPUT_PORT_TYPE
+OF <= 66.DB_MAX_OUTPUT_PORT_TYPE
+OG <= 72.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|vecttofo:inst15
+A <= S[3].DB_MAX_OUTPUT_PORT_TYPE
+B <= S[2].DB_MAX_OUTPUT_PORT_TYPE
+C <= S[1].DB_MAX_OUTPUT_PORT_TYPE
+d <= S[0].DB_MAX_OUTPUT_PORT_TYPE
+S[3] => A.DATAIN
+S[2] => B.DATAIN
+S[1] => C.DATAIN
+S[0] => d.DATAIN
+
+
+|PRIN|superif:inst18
+A[5] => bcd.DATAA
+A[5] => bcd.DATAA
+A[5] => bcd[3].DATAA
+A[5] => bcd[3].DATAB
+A[5] => bcd[3].DATAB
+A[5] => bcd[3].DATAB
+A[5] => bcd[3].DATAB
+A[5] => ledcomp.DATAB
+A[5] => Equal7.IN3
+A[5] => Equal8.IN5
+A[5] => Equal9.IN3
+A[5] => Equal10.IN5
+A[5] => Equal11.IN2
+A[5] => Equal12.IN5
+A[5] => Equal13.IN4
+A[5] => Equal14.IN5
+A[5] => Equal15.IN3
+A[5] => Equal16.IN5
+A[5] => Equal17.IN3
+A[5] => Equal18.IN5
+A[5] => Equal19.IN2
+A[5] => Equal20.IN5
+A[5] => Equal21.IN3
+A[5] => Equal22.IN5
+A[5] => Equal23.IN2
+A[5] => Equal24.IN5
+A[5] => Equal25.IN2
+A[5] => Equal26.IN5
+A[5] => Equal27.IN1
+A[5] => Equal28.IN5
+A[5] => Equal29.IN4
+A[5] => Equal30.IN5
+A[5] => Equal31.IN3
+A[5] => Equal32.IN5
+A[5] => Equal33.IN3
+A[5] => Equal34.IN5
+A[5] => Equal35.IN2
+A[5] => Equal36.IN5
+A[5] => Equal37.IN3
+A[5] => Equal38.IN5
+A[5] => Equal39.IN2
+A[5] => Equal40.IN5
+A[5] => Equal41.IN2
+A[5] => Equal42.IN5
+A[5] => Equal43.IN1
+A[5] => Equal44.IN5
+A[5] => Equal45.IN3
+A[5] => Equal46.IN5
+A[4] => bcd.DATAA
+A[4] => bcd.DATAA
+A[4] => bcd[2].DATAA
+A[4] => bcd[2].DATAB
+A[4] => bcd[2].DATAB
+A[4] => bcd[2].DATAB
+A[4] => bcd[2].DATAB
+A[4] => Equal7.IN5
+A[4] => Equal8.IN4
+A[4] => Equal9.IN2
+A[4] => Equal10.IN2
+A[4] => Equal11.IN5
+A[4] => Equal12.IN4
+A[4] => Equal13.IN3
+A[4] => Equal14.IN3
+A[4] => Equal15.IN5
+A[4] => Equal16.IN4
+A[4] => Equal17.IN2
+A[4] => Equal18.IN2
+A[4] => Equal19.IN5
+A[4] => Equal20.IN4
+A[4] => Equal21.IN2
+A[4] => Equal22.IN2
+A[4] => Equal23.IN5
+A[4] => Equal24.IN4
+A[4] => Equal25.IN1
+A[4] => Equal26.IN1
+A[4] => Equal27.IN5
+A[4] => Equal28.IN4
+A[4] => Equal29.IN3
+A[4] => Equal30.IN3
+A[4] => Equal31.IN5
+A[4] => Equal32.IN4
+A[4] => Equal33.IN2
+A[4] => Equal34.IN2
+A[4] => Equal35.IN5
+A[4] => Equal36.IN4
+A[4] => Equal37.IN2
+A[4] => Equal38.IN2
+A[4] => Equal39.IN5
+A[4] => Equal40.IN4
+A[4] => Equal41.IN1
+A[4] => Equal42.IN1
+A[4] => Equal43.IN5
+A[4] => Equal44.IN4
+A[4] => Equal45.IN2
+A[4] => Equal46.IN2
+A[3] => bcd.DATAA
+A[3] => bcd.DATAA
+A[3] => bcd[1].DATAA
+A[3] => bcd[1].DATAB
+A[3] => bcd[1].DATAB
+A[3] => bcd[1].DATAB
+A[3] => bcd[1].DATAB
+A[3] => Equal7.IN2
+A[3] => Equal8.IN2
+A[3] => Equal9.IN5
+A[3] => Equal10.IN4
+A[3] => Equal11.IN4
+A[3] => Equal12.IN3
+A[3] => Equal13.IN2
+A[3] => Equal14.IN2
+A[3] => Equal15.IN2
+A[3] => Equal16.IN2
+A[3] => Equal17.IN5
+A[3] => Equal18.IN4
+A[3] => Equal19.IN4
+A[3] => Equal20.IN3
+A[3] => Equal21.IN1
+A[3] => Equal22.IN1
+A[3] => Equal23.IN1
+A[3] => Equal24.IN1
+A[3] => Equal25.IN5
+A[3] => Equal26.IN4
+A[3] => Equal27.IN4
+A[3] => Equal28.IN3
+A[3] => Equal29.IN2
+A[3] => Equal30.IN2
+A[3] => Equal31.IN2
+A[3] => Equal32.IN2
+A[3] => Equal33.IN5
+A[3] => Equal34.IN4
+A[3] => Equal35.IN4
+A[3] => Equal36.IN3
+A[3] => Equal37.IN1
+A[3] => Equal38.IN1
+A[3] => Equal39.IN1
+A[3] => Equal40.IN1
+A[3] => Equal41.IN5
+A[3] => Equal42.IN4
+A[3] => Equal43.IN4
+A[3] => Equal44.IN3
+A[3] => Equal45.IN1
+A[3] => Equal46.IN1
+A[2] => bcd.DATAA
+A[2] => bcd.DATAA
+A[2] => minusled.DATAB
+A[2] => Equal7.IN4
+A[2] => Equal8.IN3
+A[2] => Equal9.IN4
+A[2] => Equal10.IN3
+A[2] => Equal11.IN3
+A[2] => Equal12.IN2
+A[2] => Equal13.IN1
+A[2] => Equal14.IN1
+A[2] => Equal15.IN1
+A[2] => Equal16.IN1
+A[2] => Equal17.IN1
+A[2] => Equal18.IN1
+A[2] => Equal19.IN1
+A[2] => Equal20.IN1
+A[2] => Equal21.IN5
+A[2] => Equal22.IN4
+A[2] => Equal23.IN4
+A[2] => Equal24.IN3
+A[2] => Equal25.IN4
+A[2] => Equal26.IN3
+A[2] => Equal27.IN3
+A[2] => Equal28.IN2
+A[2] => Equal29.IN1
+A[2] => Equal30.IN1
+A[2] => Equal31.IN1
+A[2] => Equal32.IN1
+A[2] => Equal33.IN1
+A[2] => Equal34.IN1
+A[2] => Equal35.IN1
+A[2] => Equal36.IN1
+A[2] => Equal37.IN5
+A[2] => Equal38.IN4
+A[2] => Equal39.IN4
+A[2] => Equal40.IN3
+A[2] => Equal41.IN4
+A[2] => Equal42.IN3
+A[2] => Equal43.IN3
+A[2] => Equal44.IN2
+A[2] => Equal45.IN0
+A[2] => Equal46.IN0
+A[1] => Equal7.IN1
+A[1] => Equal8.IN1
+A[1] => Equal9.IN1
+A[1] => Equal10.IN1
+A[1] => Equal11.IN1
+A[1] => Equal12.IN1
+A[1] => Equal13.IN5
+A[1] => Equal14.IN4
+A[1] => Equal15.IN4
+A[1] => Equal16.IN3
+A[1] => Equal17.IN4
+A[1] => Equal18.IN3
+A[1] => Equal19.IN3
+A[1] => Equal20.IN2
+A[1] => Equal21.IN4
+A[1] => Equal22.IN3
+A[1] => Equal23.IN3
+A[1] => Equal24.IN2
+A[1] => Equal25.IN3
+A[1] => Equal26.IN2
+A[1] => Equal27.IN2
+A[1] => Equal28.IN1
+A[1] => Equal29.IN0
+A[1] => Equal30.IN0
+A[1] => Equal31.IN0
+A[1] => Equal32.IN0
+A[1] => Equal33.IN0
+A[1] => Equal34.IN0
+A[1] => Equal35.IN0
+A[1] => Equal36.IN0
+A[1] => Equal37.IN0
+A[1] => Equal38.IN0
+A[1] => Equal39.IN0
+A[1] => Equal40.IN0
+A[1] => Equal41.IN0
+A[1] => Equal42.IN0
+A[1] => Equal43.IN0
+A[1] => Equal44.IN0
+A[1] => Equal45.IN5
+A[1] => Equal46.IN4
+A[0] => Equal7.IN0
+A[0] => Equal8.IN0
+A[0] => Equal9.IN0
+A[0] => Equal10.IN0
+A[0] => Equal11.IN0
+A[0] => Equal12.IN0
+A[0] => Equal13.IN0
+A[0] => Equal14.IN0
+A[0] => Equal15.IN0
+A[0] => Equal16.IN0
+A[0] => Equal17.IN0
+A[0] => Equal18.IN0
+A[0] => Equal19.IN0
+A[0] => Equal20.IN0
+A[0] => Equal21.IN0
+A[0] => Equal22.IN0
+A[0] => Equal23.IN0
+A[0] => Equal24.IN0
+A[0] => Equal25.IN0
+A[0] => Equal26.IN0
+A[0] => Equal27.IN0
+A[0] => Equal28.IN0
+A[0] => Equal29.IN5
+A[0] => Equal30.IN4
+A[0] => Equal31.IN4
+A[0] => Equal32.IN3
+A[0] => Equal33.IN4
+A[0] => Equal34.IN3
+A[0] => Equal35.IN3
+A[0] => Equal36.IN2
+A[0] => Equal37.IN4
+A[0] => Equal38.IN3
+A[0] => Equal39.IN3
+A[0] => Equal40.IN2
+A[0] => Equal41.IN3
+A[0] => Equal42.IN2
+A[0] => Equal43.IN2
+A[0] => Equal44.IN1
+A[0] => Equal45.IN4
+A[0] => Equal46.IN3
+selec[2] => Equal0.IN2
+selec[2] => Equal1.IN2
+selec[2] => Equal2.IN1
+selec[2] => Equal3.IN2
+selec[2] => Equal4.IN1
+selec[2] => Equal5.IN2
+selec[2] => Equal6.IN0
+selec[2] => Equal47.IN2
+selec[1] => Equal0.IN1
+selec[1] => Equal1.IN1
+selec[1] => Equal2.IN2
+selec[1] => Equal3.IN1
+selec[1] => Equal4.IN0
+selec[1] => Equal5.IN0
+selec[1] => Equal6.IN2
+selec[1] => Equal47.IN1
+selec[0] => Equal0.IN0
+selec[0] => Equal1.IN0
+selec[0] => Equal2.IN0
+selec[0] => Equal3.IN0
+selec[0] => Equal4.IN2
+selec[0] => Equal5.IN1
+selec[0] => Equal6.IN1
+selec[0] => Equal47.IN0
+bcd[3] <= bcd[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd[2] <= bcd[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] <= bcd[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd[0] <= bcd[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[3] <= bcd2[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[2] <= bcd2[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[1] <= bcd2[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+bcd2[0] <= <GND>
+minusled <= minusled$latch.DB_MAX_OUTPUT_PORT_TYPE
+ledcomp <= ledcomp$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTPRIN:inst9
+CA2[2] => S[5].DATAA
+CA2[1] => S[4].DATAA
+CA2[0] => S[3].DATAA
+COMP => S[5].DATAB
+NOTF[2] => S[5].DATAB
+NOTF[1] => S[4].DATAB
+NOTF[0] => S[3].DATAB
+SUMA[3] => S[5].DATAB
+SUMA[2] => S[4].DATAB
+SUMA[1] => S[3].DATAB
+SUMA[0] => S[2].DATAB
+RESTA[3] => S[5].DATAB
+RESTA[2] => S[4].DATAB
+RESTA[1] => S[3].DATAB
+RESTA[0] => S[2].DATAB
+FAND[2] => S[5].DATAB
+FAND[1] => S[4].DATAB
+FAND[0] => S[3].DATAB
+FXOR[2] => S[5].DATAB
+FXOR[1] => S[4].DATAB
+FXOR[0] => S[3].DATAB
+MULT[5] => S[5].DATAB
+MULT[4] => S[4].DATAB
+MULT[3] => S[3].DATAB
+MULT[2] => S[2].DATAB
+MULT[1] => S[1].DATAB
+MULT[0] => S[0].DATAB
+SELEC[2] => Equal0.IN2
+SELEC[2] => Equal1.IN2
+SELEC[2] => Equal2.IN1
+SELEC[2] => Equal3.IN2
+SELEC[2] => Equal4.IN1
+SELEC[2] => Equal5.IN2
+SELEC[2] => Equal6.IN0
+SELEC[2] => Equal7.IN2
+SELEC[1] => Equal0.IN1
+SELEC[1] => Equal1.IN1
+SELEC[1] => Equal2.IN2
+SELEC[1] => Equal3.IN1
+SELEC[1] => Equal4.IN0
+SELEC[1] => Equal5.IN0
+SELEC[1] => Equal6.IN2
+SELEC[1] => Equal7.IN1
+SELEC[0] => Equal0.IN0
+SELEC[0] => Equal1.IN0
+SELEC[0] => Equal2.IN0
+SELEC[0] => Equal3.IN0
+SELEC[0] => Equal4.IN2
+SELEC[0] => Equal5.IN1
+SELEC[0] => Equal6.IN1
+SELEC[0] => Equal7.IN0
+S[5] <= S[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= S[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|comparador:inst7
+A[2] => LessThan0.IN3
+A[1] => LessThan0.IN2
+A[0] => LessThan0.IN1
+B[2] => LessThan0.IN6
+B[1] => LessThan0.IN5
+B[0] => LessThan0.IN4
+salida <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|TTOVECT:inst11
+A => S[2].DATAIN
+B => S[1].DATAIN
+C => S[0].DATAIN
+S[2] <= A.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|TTOVECT:inst12
+A => S[2].DATAIN
+B => S[1].DATAIN
+C => S[0].DATAIN
+S[2] <= A.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|CA2:inst
+A[2] => S.IN0
+A[2] => S.IN0
+A[2] => S[2].DATAIN
+A[2] => S.IN1
+A[1] => S.IN1
+A[1] => S.IN1
+A[1] => S.IN0
+A[0] => S.IN1
+A[0] => S.IN1
+S[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MUXAB:inst13
+A[2] => OUTPUT.DATAB
+A[1] => OUTPUT.DATAB
+A[0] => OUTPUT.DATAB
+B[2] => OUTPUT.DATAA
+B[1] => OUTPUT.DATAA
+B[0] => OUTPUT.DATAA
+SEL => OUTPUT.OUTPUTSELECT
+SEL => OUTPUT.OUTPUTSELECT
+SEL => OUTPUT.OUTPUTSELECT
+SEL => led.DATAIN
+OUTPUT[2] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[1] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+OUTPUT[0] <= OUTPUT.DB_MAX_OUTPUT_PORT_TYPE
+led <= SEL.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|CHANGEBUT:inst1
+D0 => ~NO_FANOUT~
+OUTPUT <= <GND>
+
+
+|PRIN|FAND:inst2
+A[2] => S.IN0
+A[1] => S.IN0
+A[0] => S.IN0
+B[2] => S.IN1
+B[1] => S.IN1
+B[0] => S.IN1
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|FXOR:inst3
+A[2] => S.IN0
+A[1] => S.IN0
+A[0] => S.IN0
+B[2] => S.IN1
+B[1] => S.IN1
+B[0] => S.IN1
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|FTOVECT:inst10
+A => S[5].DATAIN
+B => S[4].DATAIN
+C => S[3].DATAIN
+D => S[2].DATAIN
+E => S[1].DATAIN
+F => S[0].DATAIN
+S[5] <= A.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= B.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= C.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= D.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= E.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= F.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTIPLICADOR:inst4
+S0 <= A0B0.DB_MAX_OUTPUT_PORT_TYPE
+A0 => A0B0.IN0
+A0 => A0B1.IN0
+A0 => A0B2.IN0
+B0 => A0B0.IN1
+B0 => A1B0.IN0
+B0 => A2B0.IN0
+S1 <= HA:inst12.R
+A1 => A1B0.IN1
+A1 => A1B1.IN0
+A1 => A1B2.IN0
+B1 => A0B1.IN1
+B1 => A1B1.IN1
+B1 => A2B1.IN1
+S2 <= HA:inst14.R
+B2 => A0B2.IN1
+B2 => A1B2.IN1
+B2 => A2B2.IN1
+A2 => A2B0.IN1
+A2 => A2B1.IN0
+A2 => A2B2.IN0
+S3 <= FA:inst10.R
+S4 <= FA:inst.R
+S5 <= FA:inst.COUT
+
+
+|PRIN|MULTIPLICADOR:inst4|HA:inst12
+R <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+COUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTIPLICADOR:inst4|HA:inst14
+R <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+COUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTIPLICADOR:inst4|FA:inst9
+R <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CIN => inst2.IN1
+CIN => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTIPLICADOR:inst4|FA:inst10
+R <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CIN => inst2.IN1
+CIN => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTIPLICADOR:inst4|HA:inst15
+R <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+COUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|MULTIPLICADOR:inst4|FA:inst
+R <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CIN => inst2.IN1
+CIN => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|NOTF:inst5
+A[2] => S[2].DATAIN
+A[1] => S[1].DATAIN
+A[0] => S[0].DATAIN
+S[2] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|RESTADOR:inst6
 A[2] => S.IN0
 A[2] => S.IN0
 A[1] => S.IN1
@@ -10,14 +640,81 @@ B[2] => S.IN1
 B[2] => CA2[1].IN0
 B[2] => CA2.IN0
 B[2] => CA2.IN1
+B[2] => Equal0.IN2
 B[1] => CA2[1].IN1
 B[1] => CA2.IN1
 B[1] => CA2.IN0
+B[1] => Equal0.IN1
 B[0] => CA2.IN1
 B[0] => CA2.IN1
+B[0] => Equal0.IN0
 S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|TTOVECT:inst17
+A => S[2].DATAIN
+B => S[1].DATAIN
+C => S[0].DATAIN
+S[2] <= A.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|fotovect:inst20
+A => S[3].DATAIN
+B => S[2].DATAIN
+C => S[1].DATAIN
+d => S[0].DATAIN
+S[3] <= A.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= B.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= d.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|sumas:inst19
+s0 <= HA:inst.R
+a0 => HA:inst.A
+b0 => HA:inst.B
+s1 <= FA:inst1.R
+a1 => FA:inst1.A
+b1 => FA:inst1.B
+s2 <= FA:inst2.R
+a2 => FA:inst2.A
+b2 => FA:inst2.B
+s3 <= FA:inst2.COUT
+
+
+|PRIN|sumas:inst19|HA:inst
+R <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+COUT <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|sumas:inst19|FA:inst1
+R <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CIN => inst2.IN1
+CIN => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PRIN|sumas:inst19|FA:inst2
+R <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => inst1.IN0
+B => inst.IN1
+B => inst1.IN1
+CIN => inst2.IN1
+CIN => inst3.IN0
+COUT <= inst4.DB_MAX_OUTPUT_PORT_TYPE
 
 

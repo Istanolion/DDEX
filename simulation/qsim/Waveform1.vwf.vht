@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/28/2018 20:19:06"
+-- Generated on "09/29/2018 13:23:00"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          RESTADOR
+-- Vhdl Test Bench(with test vectors) for design  :          MULTIPLICADOR
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,97 +28,130 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY RESTADOR_vhd_vec_tst IS
-END RESTADOR_vhd_vec_tst;
-ARCHITECTURE RESTADOR_arch OF RESTADOR_vhd_vec_tst IS
+ENTITY MULTIPLICADOR_vhd_vec_tst IS
+END MULTIPLICADOR_vhd_vec_tst;
+ARCHITECTURE MULTIPLICADOR_arch OF MULTIPLICADOR_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL A : STD_LOGIC_VECTOR(0 TO 2);
-SIGNAL B : STD_LOGIC_VECTOR(0 TO 2);
-SIGNAL S : STD_LOGIC_VECTOR(0 TO 3);
-COMPONENT RESTADOR
+SIGNAL A0 : STD_LOGIC;
+SIGNAL A1 : STD_LOGIC;
+SIGNAL A2 : STD_LOGIC;
+SIGNAL B0 : STD_LOGIC;
+SIGNAL B1 : STD_LOGIC;
+SIGNAL B2 : STD_LOGIC;
+SIGNAL S0 : STD_LOGIC;
+SIGNAL S1 : STD_LOGIC;
+SIGNAL S2 : STD_LOGIC;
+SIGNAL S3 : STD_LOGIC;
+SIGNAL S4 : STD_LOGIC;
+SIGNAL S5 : STD_LOGIC;
+COMPONENT MULTIPLICADOR
 	PORT (
-	A : IN STD_LOGIC_VECTOR(0 TO 2);
-	B : IN STD_LOGIC_VECTOR(0 TO 2);
-	S : OUT STD_LOGIC_VECTOR(0 TO 3)
+	A0 : IN STD_LOGIC;
+	A1 : IN STD_LOGIC;
+	A2 : IN STD_LOGIC;
+	B0 : IN STD_LOGIC;
+	B1 : IN STD_LOGIC;
+	B2 : IN STD_LOGIC;
+	S0 : OUT STD_LOGIC;
+	S1 : OUT STD_LOGIC;
+	S2 : OUT STD_LOGIC;
+	S3 : OUT STD_LOGIC;
+	S4 : OUT STD_LOGIC;
+	S5 : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : RESTADOR
+	i1 : MULTIPLICADOR
 	PORT MAP (
 -- list connections between master ports and signals
-	A => A,
-	B => B,
-	S => S
+	A0 => A0,
+	A1 => A1,
+	A2 => A2,
+	B0 => B0,
+	B1 => B1,
+	B2 => B2,
+	S0 => S0,
+	S1 => S1,
+	S2 => S2,
+	S3 => S3,
+	S4 => S4,
+	S5 => S5
 	);
--- A[2]
-t_prcs_A_2: PROCESS
+
+-- A0
+t_prcs_A0: PROCESS
 BEGIN
 LOOP
-	A(2) <= '0';
+	A0 <= '0';
 	WAIT FOR 10000 ps;
-	A(2) <= '1';
+	A0 <= '1';
 	WAIT FOR 10000 ps;
 	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_A_2;
--- A[1]
-t_prcs_A_1: PROCESS
+END PROCESS t_prcs_A0;
+
+-- A1
+t_prcs_A1: PROCESS
 BEGIN
 LOOP
-	A(1) <= '0';
+	A1 <= '0';
 	WAIT FOR 20000 ps;
-	A(1) <= '1';
+	A1 <= '1';
 	WAIT FOR 20000 ps;
 	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_A_1;
--- A[0]
-t_prcs_A_0: PROCESS
+END PROCESS t_prcs_A1;
+
+-- A2
+t_prcs_A2: PROCESS
 BEGIN
 LOOP
-	A(0) <= '0';
+	A2 <= '0';
 	WAIT FOR 40000 ps;
-	A(0) <= '1';
+	A2 <= '1';
 	WAIT FOR 40000 ps;
 	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_A_0;
--- B[2]
-t_prcs_B_2: PROCESS
+END PROCESS t_prcs_A2;
+
+-- B0
+t_prcs_B0: PROCESS
 BEGIN
 LOOP
-	B(2) <= '0';
+	B0 <= '0';
 	WAIT FOR 80000 ps;
-	B(2) <= '1';
+	B0 <= '1';
 	WAIT FOR 80000 ps;
 	IF (NOW >= 4000000 ps) THEN WAIT; END IF;
 END LOOP;
-END PROCESS t_prcs_B_2;
--- B[1]
-t_prcs_B_1: PROCESS
+END PROCESS t_prcs_B0;
+
+-- B1
+t_prcs_B1: PROCESS
 BEGIN
 	FOR i IN 1 TO 12
 	LOOP
-		B(1) <= '0';
+		B1 <= '0';
 		WAIT FOR 160000 ps;
-		B(1) <= '1';
+		B1 <= '1';
 		WAIT FOR 160000 ps;
 	END LOOP;
-	B(1) <= '0';
+	B1 <= '0';
 WAIT;
-END PROCESS t_prcs_B_1;
--- B[0]
-t_prcs_B_0: PROCESS
+END PROCESS t_prcs_B1;
+
+-- B2
+t_prcs_B2: PROCESS
 BEGIN
 	FOR i IN 1 TO 6
 	LOOP
-		B(0) <= '0';
+		B2 <= '0';
 		WAIT FOR 320000 ps;
-		B(0) <= '1';
+		B2 <= '1';
 		WAIT FOR 320000 ps;
 	END LOOP;
-	B(0) <= '0';
+	B2 <= '0';
 WAIT;
-END PROCESS t_prcs_B_0;
-END RESTADOR_arch;
+END PROCESS t_prcs_B2;
+END MULTIPLICADOR_arch;

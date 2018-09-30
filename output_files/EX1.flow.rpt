@@ -1,5 +1,5 @@
 Flow report for EX1
-Fri Sep 28 20:19:07 2018
+Sun Sep 30 12:31:58 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Sep 28 20:19:07 2018       ;
+; Flow Status                        ; Successful - Sun Sep 30 12:31:55 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; EX1                                         ;
-; Top-level Entity Name              ; RESTADOR                                    ;
+; Top-level Entity Name              ; PRIN                                        ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M08SAU169C8G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 6                                           ;
-;     Total combinational functions  ; 6                                           ;
-;     Dedicated logic registers      ; 0                                           ;
+; Total logic elements               ; 81 / 8,064 ( 1 % )                          ;
+;     Total combinational functions  ; 81 / 8,064 ( 1 % )                          ;
+;     Dedicated logic registers      ; 0 / 8,064 ( 0 % )                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 10                                          ;
+; Total pins                         ; 20 / 130 ( 15 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
+; Total memory bits                  ; 0 / 387,072 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 0 / 48 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
+; ADC blocks                         ; 0 / 1 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/28/2018 20:18:16 ;
+; Start date & time ; 09/30/2018 12:31:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; EX1                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 247207020255681.153818389608476        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 247207020255681.153832869201064        ; --            ; --          ; --         ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                     ; Off           ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
@@ -86,14 +86,14 @@ refer to the applicable agreement for further details.
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --          ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; RESTADOR    ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; RESTADOR    ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; RESTADOR    ; Top        ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; PRIN        ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; PRIN        ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; PRIN        ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                 ; 12.5%         ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                    ; RESTADOR                               ; EX1           ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; PRIN                                   ; EX1           ; --          ; --         ;
 ; VCCA_USER_VOLTAGE                   ; 3.3V                                   ; --            ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -103,10 +103,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4784 MB             ; 00:00:22                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4643 MB             ; 00:00:01                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4788 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 5470 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4678 MB             ; 00:00:01                           ;
+; Power Analyzer       ; 00:00:02     ; 1.1                     ; 4802 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4772 MB             ; 00:00:02                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -116,8 +118,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Power Analyzer       ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-3SSVIJH  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -125,8 +129,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off EX1 -c EX1
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off EX1 -c EX1 --vector_source=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/Waveform1.vwf --testbench_file=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/Waveform1.vwf.vht
-quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=Z:/Istanolion/Documents/GitHub/DDEX/DDEX/simulation/qsim/ EX1 -c EX1
+quartus_fit --read_settings_files=off --write_settings_files=off EX1 -c EX1
+quartus_asm --read_settings_files=off --write_settings_files=off EX1 -c EX1
+quartus_pow --read_settings_files=off --write_settings_files=off EX1 -c EX1
+quartus_sta EX1 -c EX1
 
 
 
