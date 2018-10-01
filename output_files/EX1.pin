@@ -123,7 +123,7 @@ A0                           : E1        : input  : 3.3-V LVTTL       :         
 REFGND                       : E2        :        :                   :         :           :                
 B1                           : E3        : input  : 3.3-V LVTTL       :         : 1A        : Y              
 S0                           : E4        : input  : 3.3-V LVTTL       :         : 1A        : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 1B        :                
+clock                        : E5        : input  : 3.3-V LVTTL       :         : 1B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
 ~ALTERA_nCONFIG~ / RESERVED_INPUT : E7        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                

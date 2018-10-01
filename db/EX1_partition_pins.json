@@ -40,6 +40,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "S1",
+					"strict" : false
+				},
+				{
+					"name" : "S2",
+					"strict" : false
+				},
+				{
+					"name" : "S0",
+					"strict" : false
+				},
+				{
+					"name" : "B2",
+					"strict" : false
+				},
+				{
 					"name" : "A0",
 					"strict" : false
 				},
@@ -52,19 +68,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "S0",
-					"strict" : false
-				},
-				{
-					"name" : "S1",
-					"strict" : false
-				},
-				{
 					"name" : "B0",
-					"strict" : false
-				},
-				{
-					"name" : "S2",
 					"strict" : false
 				},
 				{
@@ -72,7 +76,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "B2",
+					"name" : "clock",
 					"strict" : false
 				}
 			]
