@@ -1,5 +1,5 @@
 Analysis & Synthesis report for EX1
-Mon Oct 01 11:23:12 2018
+Mon Oct 01 21:42:19 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -45,16 +45,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 01 11:23:12 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 01 21:42:19 2018       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; EX1                                         ;
 ; Top-level Entity Name              ; PRIN                                        ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 110                                         ;
-;     Total combinational functions  ; 110                                         ;
-;     Dedicated logic registers      ; 1                                           ;
-; Total registers                    ; 1                                           ;
-; Total pins                         ; 21                                          ;
+; Total logic elements               ; 121                                         ;
+;     Total combinational functions  ; 119                                         ;
+;     Dedicated logic registers      ; 4                                           ;
+; Total registers                    ; 4                                           ;
+; Total pins                         ; 26                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -156,14 +156,14 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -172,27 +172,27 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                      ; Library ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------+---------+
-; CA2.vhd                          ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/CA2.vhd                      ;         ;
-; comparador.vhd                   ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/comparador.vhd               ;         ;
-; NOTF.vhd                         ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/NOTF.vhd                     ;         ;
-; RESTADOR.vhd                     ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/RESTADOR.vhd                 ;         ;
-; FAND.vhd                         ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/FAND.vhd                     ;         ;
-; FXOR.vhd                         ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/FXOR.vhd                     ;         ;
-; HA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/akuma/Documents/GitHub/DDEX/HA.bdf                       ;         ;
-; FA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; C:/Users/akuma/Documents/GitHub/DDEX/FA.bdf                       ;         ;
-; MULTIPLICADOR.bdf                ; yes             ; User Block Diagram/Schematic File  ; C:/Users/akuma/Documents/GitHub/DDEX/MULTIPLICADOR.bdf            ;         ;
-; MULTPRIN.vhd                     ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd                 ;         ;
-; MUXAB.vhd                        ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/MUXAB.vhd                    ;         ;
-; CHANGEBUT.vhd                    ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/CHANGEBUT.vhd                ;         ;
-; PRIN.bdf                         ; yes             ; User Block Diagram/Schematic File  ; C:/Users/akuma/Documents/GitHub/DDEX/PRIN.bdf                     ;         ;
-; FTOVECT.vhd                      ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/FTOVECT.vhd                  ;         ;
-; TTOVECT.vhd                      ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/TTOVECT.vhd                  ;         ;
-; clock.vhd                        ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/clock.vhd                    ;         ;
-; superif.vhd                      ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd                  ;         ;
-; muxbcd.vhd                       ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/muxbcd.vhd                   ;         ;
-; sumas.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/akuma/Documents/GitHub/DDEX/sumas.bdf                    ;         ;
-; fotovect.vhd                     ; yes             ; User VHDL File                     ; C:/Users/akuma/Documents/GitHub/DDEX/fotovect.vhd                 ;         ;
-; 7448.bdf                         ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.0/quartus/libraries/others/maxplus2/7448.bdf ;         ;
+; CA2.vhd                          ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/CA2.vhd                  ;         ;
+; comparador.vhd                   ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/comparador.vhd           ;         ;
+; NOTF.vhd                         ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/NOTF.vhd                 ;         ;
+; RESTADOR.vhd                     ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/RESTADOR.vhd             ;         ;
+; FAND.vhd                         ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FAND.vhd                 ;         ;
+; FXOR.vhd                         ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FXOR.vhd                 ;         ;
+; HA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/HA.bdf                   ;         ;
+; FA.bdf                           ; yes             ; User Block Diagram/Schematic File  ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FA.bdf                   ;         ;
+; MULTIPLICADOR.bdf                ; yes             ; User Block Diagram/Schematic File  ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTIPLICADOR.bdf        ;         ;
+; MULTPRIN.vhd                     ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd             ;         ;
+; MUXAB.vhd                        ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MUXAB.vhd                ;         ;
+; CHANGEBUT.vhd                    ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/CHANGEBUT.vhd            ;         ;
+; PRIN.bdf                         ; yes             ; User Block Diagram/Schematic File  ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/PRIN.bdf                 ;         ;
+; FTOVECT.vhd                      ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FTOVECT.vhd              ;         ;
+; TTOVECT.vhd                      ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/TTOVECT.vhd              ;         ;
+; clock.vhd                        ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/clock.vhd                ;         ;
+; superif.vhd                      ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd              ;         ;
+; muxbcd.vhd                       ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/muxbcd.vhd               ;         ;
+; sumas.bdf                        ; yes             ; User Block Diagram/Schematic File  ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/sumas.bdf                ;         ;
+; fotovect.vhd                     ; yes             ; User VHDL File                     ; Z:/Istanolion/Documents/GitHub/DDEX/DDEX/fotovect.vhd             ;         ;
+; 7448.bdf                         ; yes             ; Megafunction                       ; z:/intelfpga_lite/18.0/quartus/libraries/others/maxplus2/7448.bdf ;         ;
 +----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------+---------+
 
 
@@ -201,30 +201,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 110      ;
+; Estimated Total logic elements              ; 121      ;
 ;                                             ;          ;
-; Total combinational functions               ; 110      ;
+; Total combinational functions               ; 119      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 76       ;
-;     -- 3 input functions                    ; 23       ;
-;     -- <=2 input functions                  ; 11       ;
+;     -- 4 input functions                    ; 86       ;
+;     -- 3 input functions                    ; 15       ;
+;     -- <=2 input functions                  ; 18       ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 110      ;
+;     -- normal mode                          ; 119      ;
 ;     -- arithmetic mode                      ; 0        ;
 ;                                             ;          ;
-; Total registers                             ; 1        ;
-;     -- Dedicated logic registers            ; 1        ;
+; Total registers                             ; 4        ;
+;     -- Dedicated logic registers            ; 4        ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
-; I/O pins                                    ; 21       ;
+; I/O pins                                    ; 26       ;
 ;                                             ;          ;
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ;                                             ;          ;
 ; Maximum fan-out node                        ; S1~input ;
-; Maximum fan-out                             ; 30       ;
-; Total fan-out                               ; 426      ;
-; Average fan-out                             ; 2.78     ;
+; Maximum fan-out                             ; 35       ;
+; Total fan-out                               ; 472      ;
+; Average fan-out                             ; 2.70     ;
 +---------------------------------------------+----------+
 
 
@@ -233,23 +233,26 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                 ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+---------------+--------------+
-; |PRIN                      ; 110 (0)             ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 21   ; 0            ; 0          ; |PRIN                               ; PRIN          ; work         ;
+; |PRIN                      ; 119 (0)             ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 26   ; 0            ; 0          ; |PRIN                               ; PRIN          ; work         ;
 ;    |7448:inst16|           ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|7448:inst16                   ; 7448          ; work         ;
 ;    |CA2:inst|              ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|CA2:inst                      ; CA2           ; work         ;
+;    |CHANGEBUT:inst1|       ; 1 (1)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|CHANGEBUT:inst1               ; CHANGEBUT     ; work         ;
 ;    |CLOCK:inst14|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|CLOCK:inst14                  ; CLOCK         ; work         ;
-;    |MULTIPLICADOR:inst4|   ; 14 (3)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4           ; MULTIPLICADOR ; work         ;
+;    |FAND:inst2|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|FAND:inst2                    ; FAND          ; work         ;
+;    |MULTIPLICADOR:inst4|   ; 13 (3)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4           ; MULTIPLICADOR ; work         ;
 ;       |FA:inst10|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|FA:inst10 ; FA            ; work         ;
-;       |FA:inst9|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|FA:inst9  ; FA            ; work         ;
+;       |FA:inst9|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|FA:inst9  ; FA            ; work         ;
 ;       |FA:inst|            ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|FA:inst   ; FA            ; work         ;
 ;       |HA:inst12|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|HA:inst12 ; HA            ; work         ;
 ;       |HA:inst14|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|HA:inst14 ; HA            ; work         ;
 ;       |HA:inst15|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTIPLICADOR:inst4|HA:inst15 ; HA            ; work         ;
-;    |MULTPRIN:inst9|        ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTPRIN:inst9                ; MULTPRIN      ; work         ;
-;    |MUXbcd:inst8|          ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MUXbcd:inst8                  ; MUXbcd        ; work         ;
+;    |MULTPRIN:inst9|        ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MULTPRIN:inst9                ; MULTPRIN      ; work         ;
+;    |MUXAB:inst13|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MUXAB:inst13                  ; MUXAB         ; work         ;
+;    |MUXbcd:inst8|          ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|MUXbcd:inst8                  ; MUXbcd        ; work         ;
 ;    |RESTADOR:inst6|        ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|RESTADOR:inst6                ; RESTADOR      ; work         ;
-;    |sumas:inst19|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|sumas:inst19                  ; sumas         ; work         ;
+;    |comparador:inst7|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|comparador:inst7              ; comparador    ; work         ;
+;    |sumas:inst19|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|sumas:inst19                  ; sumas         ; work         ;
 ;       |FA:inst1|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|sumas:inst19|FA:inst1         ; FA            ; work         ;
-;       |FA:inst2|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|sumas:inst19|FA:inst2         ; FA            ; work         ;
 ;    |superif:inst18|        ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |PRIN|superif:inst18                ; superif       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -291,7 +294,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 4     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -316,19 +319,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 21                          ;
-; cycloneiii_ff         ; 1                           ;
-;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 118                         ;
-;     normal            ; 118                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 76                          ;
+; boundary_port         ; 26                          ;
+; cycloneiii_ff         ; 4                           ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 128                         ;
+;     normal            ; 128                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 86                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 11.55                       ;
+; Average LUT depth     ; 11.61                       ;
 +-----------------------+-----------------------------+
 
 
@@ -337,7 +339,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -347,31 +349,31 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 01 11:22:19 2018
+    Info: Processing started: Mon Oct 01 21:42:07 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off EX1 -c EX1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ca2.vhd
-    Info (12022): Found design unit 1: CA2-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/CA2.vhd Line: 12
-    Info (12023): Found entity 1: CA2 File: C:/Users/akuma/Documents/GitHub/DDEX/CA2.vhd Line: 5
+    Info (12022): Found design unit 1: CA2-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/CA2.vhd Line: 12
+    Info (12023): Found entity 1: CA2 File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/CA2.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
-    Info (12022): Found design unit 1: comparador-LEQ File: C:/Users/akuma/Documents/GitHub/DDEX/comparador.vhd Line: 13
-    Info (12023): Found entity 1: comparador File: C:/Users/akuma/Documents/GitHub/DDEX/comparador.vhd Line: 4
+    Info (12022): Found design unit 1: comparador-LEQ File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/comparador.vhd Line: 13
+    Info (12023): Found entity 1: comparador File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/comparador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file notf.vhd
-    Info (12022): Found design unit 1: NOTF-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/NOTF.vhd Line: 12
-    Info (12023): Found entity 1: NOTF File: C:/Users/akuma/Documents/GitHub/DDEX/NOTF.vhd Line: 5
+    Info (12022): Found design unit 1: NOTF-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/NOTF.vhd Line: 12
+    Info (12023): Found entity 1: NOTF File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/NOTF.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file sumador.vhd
-    Info (12022): Found design unit 1: SUMADOR-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/SUMADOR.vhd Line: 13
-    Info (12023): Found entity 1: sUMADOR File: C:/Users/akuma/Documents/GitHub/DDEX/SUMADOR.vhd Line: 5
+    Info (12022): Found design unit 1: SUMADOR-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/SUMADOR.vhd Line: 13
+    Info (12023): Found entity 1: sUMADOR File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/SUMADOR.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file restador.vhd
-    Info (12022): Found design unit 1: RESTADOR-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/RESTADOR.vhd Line: 13
-    Info (12023): Found entity 1: RESTADOR File: C:/Users/akuma/Documents/GitHub/DDEX/RESTADOR.vhd Line: 5
+    Info (12022): Found design unit 1: RESTADOR-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/RESTADOR.vhd Line: 13
+    Info (12023): Found entity 1: RESTADOR File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/RESTADOR.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fand.vhd
-    Info (12022): Found design unit 1: FAND-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/FAND.vhd Line: 13
-    Info (12023): Found entity 1: FAND File: C:/Users/akuma/Documents/GitHub/DDEX/FAND.vhd Line: 5
+    Info (12022): Found design unit 1: FAND-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FAND.vhd Line: 13
+    Info (12023): Found entity 1: FAND File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FAND.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fxor.vhd
-    Info (12022): Found design unit 1: FXOR-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/FXOR.vhd Line: 13
-    Info (12023): Found entity 1: FXOR File: C:/Users/akuma/Documents/GitHub/DDEX/FXOR.vhd Line: 5
+    Info (12022): Found design unit 1: FXOR-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FXOR.vhd Line: 13
+    Info (12023): Found entity 1: FXOR File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FXOR.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file ha.bdf
     Info (12023): Found entity 1: HA
 Info (12021): Found 1 design units, including 1 entities, in source file fa.bdf
@@ -379,39 +381,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file fa.bdf
 Info (12021): Found 1 design units, including 1 entities, in source file multiplicador.bdf
     Info (12023): Found entity 1: MULTIPLICADOR
 Info (12021): Found 2 design units, including 1 entities, in source file multprin.vhd
-    Info (12022): Found design unit 1: MULTPRIN-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 20
-    Info (12023): Found entity 1: MULTPRIN File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 5
+    Info (12022): Found design unit 1: MULTPRIN-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 20
+    Info (12023): Found entity 1: MULTPRIN File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxab.vhd
-    Info (12022): Found design unit 1: MUXAB-BEHAVIORAL File: C:/Users/akuma/Documents/GitHub/DDEX/MUXAB.vhd Line: 15
-    Info (12023): Found entity 1: MUXAB File: C:/Users/akuma/Documents/GitHub/DDEX/MUXAB.vhd Line: 5
+    Info (12022): Found design unit 1: MUXAB-BEHAVIORAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MUXAB.vhd Line: 15
+    Info (12023): Found entity 1: MUXAB File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MUXAB.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file changebut.vhd
-    Info (12022): Found design unit 1: CHANGEBUT-BEHAVIORAL File: C:/Users/akuma/Documents/GitHub/DDEX/CHANGEBUT.vhd Line: 13
-    Info (12023): Found entity 1: CHANGEBUT File: C:/Users/akuma/Documents/GitHub/DDEX/CHANGEBUT.vhd Line: 5
+    Info (12022): Found design unit 1: CHANGEBUT-BEHAVIORAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/CHANGEBUT.vhd Line: 13
+    Info (12023): Found entity 1: CHANGEBUT File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/CHANGEBUT.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file prin.bdf
     Info (12023): Found entity 1: PRIN
 Info (12021): Found 2 design units, including 1 entities, in source file ftovect.vhd
-    Info (12022): Found design unit 1: FTOVECT-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/FTOVECT.vhd Line: 17
-    Info (12023): Found entity 1: FTOVECT File: C:/Users/akuma/Documents/GitHub/DDEX/FTOVECT.vhd Line: 5
+    Info (12022): Found design unit 1: FTOVECT-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FTOVECT.vhd Line: 17
+    Info (12023): Found entity 1: FTOVECT File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/FTOVECT.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file ttovect.vhd
-    Info (12022): Found design unit 1: TTOVECT-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/TTOVECT.vhd Line: 15
-    Info (12023): Found entity 1: TTOVECT File: C:/Users/akuma/Documents/GitHub/DDEX/TTOVECT.vhd Line: 5
+    Info (12022): Found design unit 1: TTOVECT-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/TTOVECT.vhd Line: 15
+    Info (12023): Found entity 1: TTOVECT File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/TTOVECT.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: CLOCK-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/clock.vhd Line: 10
-    Info (12023): Found entity 1: CLOCK File: C:/Users/akuma/Documents/GitHub/DDEX/clock.vhd Line: 4
+    Info (12022): Found design unit 1: CLOCK-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/clock.vhd Line: 10
+    Info (12023): Found entity 1: CLOCK File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/clock.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file superif.vhd
-    Info (12022): Found design unit 1: superif-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 15
-    Info (12023): Found entity 1: superif File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 5
+    Info (12022): Found design unit 1: superif-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 15
+    Info (12023): Found entity 1: superif File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file muxbcd.vhd
-    Info (12022): Found design unit 1: MUXbcd-BEHAVIORAL File: C:/Users/akuma/Documents/GitHub/DDEX/muxbcd.vhd Line: 17
-    Info (12023): Found entity 1: MUXbcd File: C:/Users/akuma/Documents/GitHub/DDEX/muxbcd.vhd Line: 5
+    Info (12022): Found design unit 1: MUXbcd-BEHAVIORAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/muxbcd.vhd Line: 17
+    Info (12023): Found entity 1: MUXbcd File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/muxbcd.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file vecttofo.vhd
-    Info (12022): Found design unit 1: vecttofo-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/vecttofo.vhd Line: 15
-    Info (12023): Found entity 1: vecttofo File: C:/Users/akuma/Documents/GitHub/DDEX/vecttofo.vhd Line: 5
+    Info (12022): Found design unit 1: vecttofo-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/vecttofo.vhd Line: 15
+    Info (12023): Found entity 1: vecttofo File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/vecttofo.vhd Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file sumas.bdf
     Info (12023): Found entity 1: sumas
 Info (12021): Found 2 design units, including 1 entities, in source file fotovect.vhd
-    Info (12022): Found design unit 1: fotovect-BEHAVORIAL File: C:/Users/akuma/Documents/GitHub/DDEX/fotovect.vhd Line: 15
-    Info (12023): Found entity 1: fotovect File: C:/Users/akuma/Documents/GitHub/DDEX/fotovect.vhd Line: 5
+    Info (12022): Found design unit 1: fotovect-BEHAVORIAL File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/fotovect.vhd Line: 15
+    Info (12023): Found entity 1: fotovect File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/fotovect.vhd Line: 5
 Info (12127): Elaborating entity "PRIN" for the top level hierarchy
 Warning (275083): Bus "bcd2[0..3]" found using same base name as "bcd", which might lead to a name conflict.
 Warning (275080): Converted elements in bus name "bcd" using legacy naming rules. Make any assignments on the new names, not on the original names.
@@ -426,35 +428,33 @@ Info (12130): Elaborated megafunction instantiation "7448:inst16"
 Info (12128): Elaborating entity "MUXbcd" for hierarchy "MUXbcd:inst8"
 Info (12128): Elaborating entity "CLOCK" for hierarchy "CLOCK:inst14"
 Info (12128): Elaborating entity "superif" for hierarchy "superif:inst18"
-Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "minusled", which holds its previous value in one or more paths through the process File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "ledcomp", which holds its previous value in one or more paths through the process File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "bcd", which holds its previous value in one or more paths through the process File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "bcd2", which holds its previous value in one or more paths through the process File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd2[3]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd2[2]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd2[1]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd2[0]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd[3]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd[2]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd[1]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "bcd[0]" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "ledcomp" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Info (10041): Inferred latch for "minusled" at superif.vhd(17) File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "minusled", which holds its previous value in one or more paths through the process File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "ledcomp", which holds its previous value in one or more paths through the process File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "bcd", which holds its previous value in one or more paths through the process File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at superif.vhd(17): inferring latch(es) for signal or variable "bcd2", which holds its previous value in one or more paths through the process File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd2[3]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd2[2]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd2[1]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd2[0]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd[3]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd[2]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd[1]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "bcd[0]" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "ledcomp" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Info (10041): Inferred latch for "minusled" at superif.vhd(17) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
 Info (12128): Elaborating entity "MULTPRIN" for hierarchy "MULTPRIN:inst9"
-Warning (10631): VHDL Process Statement warning at MULTPRIN.vhd(22): inferring latch(es) for signal or variable "S", which holds its previous value in one or more paths through the process File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Info (10041): Inferred latch for "S[5]" at MULTPRIN.vhd(22) File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Info (10041): Inferred latch for "S[4]" at MULTPRIN.vhd(22) File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Info (10041): Inferred latch for "S[3]" at MULTPRIN.vhd(22) File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Info (10041): Inferred latch for "S[2]" at MULTPRIN.vhd(22) File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Info (10041): Inferred latch for "S[1]" at MULTPRIN.vhd(22) File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Info (10041): Inferred latch for "S[0]" at MULTPRIN.vhd(22) File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
+Warning (10631): VHDL Process Statement warning at MULTPRIN.vhd(22): inferring latch(es) for signal or variable "S", which holds its previous value in one or more paths through the process File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Info (10041): Inferred latch for "S[5]" at MULTPRIN.vhd(22) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Info (10041): Inferred latch for "S[4]" at MULTPRIN.vhd(22) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Info (10041): Inferred latch for "S[3]" at MULTPRIN.vhd(22) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Info (10041): Inferred latch for "S[2]" at MULTPRIN.vhd(22) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Info (10041): Inferred latch for "S[1]" at MULTPRIN.vhd(22) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Info (10041): Inferred latch for "S[0]" at MULTPRIN.vhd(22) File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
 Info (12128): Elaborating entity "comparador" for hierarchy "comparador:inst7"
 Info (12128): Elaborating entity "TTOVECT" for hierarchy "TTOVECT:inst11"
 Info (12128): Elaborating entity "CA2" for hierarchy "CA2:inst"
 Info (12128): Elaborating entity "MUXAB" for hierarchy "MUXAB:inst13"
 Info (12128): Elaborating entity "CHANGEBUT" for hierarchy "CHANGEBUT:inst1"
-Warning (10541): VHDL Signal Declaration warning at CHANGEBUT.vhd(14): used implicit default value for signal "CLOCK" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/akuma/Documents/GitHub/DDEX/CHANGEBUT.vhd Line: 14
-Warning (10873): Using initial value X (don't care) for net "OUTPUT" at CHANGEBUT.vhd(8) File: C:/Users/akuma/Documents/GitHub/DDEX/CHANGEBUT.vhd Line: 8
 Info (12128): Elaborating entity "FAND" for hierarchy "FAND:inst2"
 Info (12128): Elaborating entity "FXOR" for hierarchy "FXOR:inst3"
 Info (12128): Elaborating entity "FTOVECT" for hierarchy "FTOVECT:inst10"
@@ -465,58 +465,54 @@ Info (12128): Elaborating entity "NOTF" for hierarchy "NOTF:inst5"
 Info (12128): Elaborating entity "RESTADOR" for hierarchy "RESTADOR:inst6"
 Info (12128): Elaborating entity "fotovect" for hierarchy "fotovect:inst20"
 Info (12128): Elaborating entity "sumas" for hierarchy "sumas:inst19"
-Warning (14026): LATCH primitive "MULTPRIN:inst9|S[2]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Warning (14026): LATCH primitive "MULTPRIN:inst9|S[4]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Warning (14026): LATCH primitive "MULTPRIN:inst9|S[3]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Warning (14026): LATCH primitive "MULTPRIN:inst9|S[5]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
-Warning (13012): Latch superif:inst18|bcd2[2] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (14026): LATCH primitive "MULTPRIN:inst9|S[2]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Warning (14026): LATCH primitive "MULTPRIN:inst9|S[4]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Warning (14026): LATCH primitive "MULTPRIN:inst9|S[3]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Warning (14026): LATCH primitive "MULTPRIN:inst9|S[5]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
+Warning (13012): Latch superif:inst18|bcd2[2] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S1
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal S1
-Warning (13012): Latch superif:inst18|bcd[2] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (13012): Latch superif:inst18|bcd[2] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S1
-Warning (13012): Latch superif:inst18|bcd[0] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (13012): Latch superif:inst18|bcd[0] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S0
-Warning (13012): Latch superif:inst18|bcd2[3] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (13012): Latch superif:inst18|bcd2[3] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S0
-Warning (13012): Latch superif:inst18|bcd[3] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (13012): Latch superif:inst18|bcd[3] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S0
-Warning (13012): Latch superif:inst18|bcd2[1] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (13012): Latch superif:inst18|bcd2[1] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S1
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal S1
-Warning (13012): Latch superif:inst18|bcd[1] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
+Warning (13012): Latch superif:inst18|bcd[1] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S1
-Warning (13012): Latch superif:inst18|ledcomp has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 12
+Warning (13012): Latch superif:inst18|ledcomp has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 12
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S0
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal S1
-Warning (13012): Latch superif:inst18|minusled has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 11
+Warning (13012): Latch superif:inst18|minusled has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 11
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S0
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal S0
-Warning (13012): Latch MULTPRIN:inst9|S[1] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
+Warning (13012): Latch MULTPRIN:inst9|S[1] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S1
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal S1
-Warning (13012): Latch MULTPRIN:inst9|S[0] has unsafe behavior File: C:/Users/akuma/Documents/GitHub/DDEX/MULTPRIN.vhd Line: 22
+Warning (13012): Latch MULTPRIN:inst9|S[0] has unsafe behavior File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/MULTPRIN.vhd Line: 22
     Warning (13013): Ports D and ENA on the latch are fed by the same signal S1
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal S1
-Warning (14026): LATCH primitive "superif:inst18|bcd[2]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (14026): LATCH primitive "superif:inst18|bcd[0]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (14026): LATCH primitive "superif:inst18|bcd2[3]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (14026): LATCH primitive "superif:inst18|bcd[3]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (14026): LATCH primitive "superif:inst18|bcd[1]" is permanently enabled File: C:/Users/akuma/Documents/GitHub/DDEX/superif.vhd Line: 17
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED0" is stuck at VCC
+Warning (14026): LATCH primitive "superif:inst18|bcd[2]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (14026): LATCH primitive "superif:inst18|bcd[0]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (14026): LATCH primitive "superif:inst18|bcd2[3]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (14026): LATCH primitive "superif:inst18|bcd[3]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
+Warning (14026): LATCH primitive "superif:inst18|bcd[1]" is permanently enabled File: Z:/Istanolion/Documents/GitHub/DDEX/DDEX/superif.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "BUTTON"
-Info (21057): Implemented 131 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 147 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 110 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Mon Oct 01 11:23:13 2018
-    Info: Elapsed time: 00:00:54
-    Info: Total CPU time (on all processors): 00:00:51
+    Info (21059): Implemented 15 output pins
+    Info (21061): Implemented 121 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Mon Oct 01 21:42:19 2018
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
 
 

@@ -21,8 +21,11 @@ B2 => MULTIPLICADOR:inst4.B2
 B2 => sumas:inst19.b2
 BUTTON => CHANGEBUT:inst1.D0
 S0 => TTOVECT:inst17.A
+S0 => sel0.DATAIN
 S1 => TTOVECT:inst17.B
+S1 => sel1.DATAIN
 S2 => TTOVECT:inst17.C
+S2 => sel2.DATAIN
 B <= 7448:inst16.OB
 C <= 7448:inst16.OC
 D <= 7448:inst16.OD
@@ -32,6 +35,11 @@ G <= 7448:inst16.OG
 ledcomp <= superif:inst18.ledcomp
 minusled <= superif:inst18.minusled
 LED0 <= MUXAB:inst13.led
+sel0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+sel1 <= S1.DB_MAX_OUTPUT_PORT_TYPE
+sel2 <= S2.DB_MAX_OUTPUT_PORT_TYPE
+power <= CLOCK:inst14.S
+npower <= inst15.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PRIN|7448:inst16
@@ -504,8 +512,11 @@ led <= SEL.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PRIN|CHANGEBUT:inst1
-D0 => ~NO_FANOUT~
-OUTPUT <= <GND>
+D0 => OUTPUT~reg0.CLK
+D0 => LASTBUT.DATAIN
+D0 => LASTBUT.CLK
+D0 => SEL.CLK
+OUTPUT <= OUTPUT~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PRIN|FAND:inst2

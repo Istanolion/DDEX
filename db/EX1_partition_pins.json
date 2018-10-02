@@ -40,6 +40,30 @@
 					"strict" : false
 				},
 				{
+					"name" : "LED0",
+					"strict" : false
+				},
+				{
+					"name" : "sel0",
+					"strict" : false
+				},
+				{
+					"name" : "sel1",
+					"strict" : false
+				},
+				{
+					"name" : "sel2",
+					"strict" : false
+				},
+				{
+					"name" : "power",
+					"strict" : false
+				},
+				{
+					"name" : "npower",
+					"strict" : false
+				},
+				{
 					"name" : "S1",
 					"strict" : false
 				},
@@ -60,6 +84,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "B0",
+					"strict" : false
+				},
+				{
 					"name" : "A1",
 					"strict" : false
 				},
@@ -68,15 +96,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "B0",
-					"strict" : false
-				},
-				{
 					"name" : "A2",
 					"strict" : false
 				},
 				{
 					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "BUTTON",
 					"strict" : false
 				}
 			]

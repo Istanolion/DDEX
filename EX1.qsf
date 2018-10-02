@@ -106,5 +106,10 @@ set_global_assignment -name BDF_FILE sumas.bdf
 set_global_assignment -name VHDL_FILE fotovect.vhd
 set_location_assignment PIN_D8 -to ledcomp
 set_location_assignment PIN_K12 -to minusled
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_location_assignment PIN_H6 -to clock
+set_location_assignment PIN_A11 -to sel0
+set_location_assignment PIN_A10 -to sel1
+set_location_assignment PIN_B10 -to sel2
+set_location_assignment PIN_J10 -to npower
+set_location_assignment PIN_H10 -to power
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
