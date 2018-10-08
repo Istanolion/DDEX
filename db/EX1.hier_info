@@ -655,14 +655,14 @@ S[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PRIN|RESTADOR:inst6
-A[2] => S.IN0
-A[2] => S.IN0
-A[1] => S.IN1
-A[1] => S.IN1
-A[0] => S.IN1
-A[0] => S.IN1
-B[2] => S.IN1
-B[2] => S.IN1
+A[2] => negado[3].IN0
+A[2] => negado.IN0
+A[1] => negado.IN1
+A[1] => negado.IN1
+A[0] => negado.IN1
+A[0] => negado.IN1
+B[2] => negado[3].IN1
+B[2] => negado.IN1
 B[2] => CA2[1].IN0
 B[2] => CA2.IN0
 B[2] => CA2.IN1
@@ -677,7 +677,7 @@ B[0] => Equal0.IN0
 S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
-S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= negado[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PRIN|TTOVECT:inst17

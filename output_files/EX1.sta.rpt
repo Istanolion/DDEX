@@ -1,5 +1,5 @@
 Timing Analyzer report for EX1
-Mon Oct 01 21:42:35 2018
+Tue Oct 02 09:55:48 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -91,15 +91,14 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.06        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.05        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.1%      ;
-;     Processors 3-4         ;   2.1%      ;
+;     Processor 2            ;   5.3%      ;
 +----------------------------+-------------+
 
 
@@ -108,6 +107,7 @@ refer to the applicable agreement for further details.
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 ; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
 +------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; A0         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { A0 }     ;
 ; BUTTON     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { BUTTON } ;
 ; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock }  ;
 ; S0         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { S0 }     ;
@@ -119,8 +119,9 @@ refer to the applicable agreement for further details.
 +-------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +-------------+-----------------+------------+---------------------------------------------------------------+
-; 174.34 MHz  ; 174.34 MHz      ; S0         ;                                                               ;
-; 309.21 MHz  ; 250.0 MHz       ; BUTTON     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 133.01 MHz  ; 133.01 MHz      ; A0         ;                                                               ;
+; 183.22 MHz  ; 183.22 MHz      ; S0         ;                                                               ;
+; 303.4 MHz   ; 250.0 MHz       ; BUTTON     ; limit due to minimum period restriction (max I/O toggle rate) ;
 ; 1353.18 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +-------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -131,8 +132,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+-------------------+
 ; Clock  ; Slack  ; End Point TNS     ;
 +--------+--------+-------------------+
-; S0     ; -3.485 ; -3.485            ;
-; BUTTON ; -1.117 ; -1.231            ;
+; S0     ; -5.826 ; -5.826            ;
+; A0     ; -3.259 ; -5.742            ;
+; BUTTON ; -1.148 ; -1.411            ;
 ; clock  ; 0.261  ; 0.000             ;
 +--------+--------+-------------------+
 
@@ -142,8 +144,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; S0     ; -0.293 ; -0.293           ;
+; A0     ; -0.229 ; -0.229           ;
 ; BUTTON ; 0.361  ; 0.000            ;
+; S0     ; 0.366  ; 0.000            ;
 ; clock  ; 0.412  ; 0.000            ;
 +--------+--------+------------------+
 
@@ -153,7 +156,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+-----------------------+
 ; Clock ; Slack  ; End Point TNS         ;
 +-------+--------+-----------------------+
-; S0    ; -2.021 ; -2.021                ;
+; S0    ; -1.849 ; -1.849                ;
 +-------+--------+-----------------------+
 
 
@@ -162,7 +165,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; S0    ; 0.884 ; 0.000                 ;
+; S0    ; 0.980 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -173,6 +176,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+---------------------------------+
 ; BUTTON ; -3.000 ; -7.461                          ;
 ; clock  ; -3.000 ; -4.487                          ;
+; A0     ; -3.000 ; -3.000                          ;
 ; S0     ; -3.000 ; -3.000                          ;
 +--------+--------+---------------------------------+
 
@@ -188,8 +192,9 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 176.49 MHz ; 176.49 MHz      ; S0         ;                                                               ;
-; 333.33 MHz ; 250.0 MHz       ; BUTTON     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 143.02 MHz ; 143.02 MHz      ; A0         ;                                                               ;
+; 185.25 MHz ; 185.25 MHz      ; S0         ;                                                               ;
+; 331.79 MHz ; 250.0 MHz       ; BUTTON     ; limit due to minimum period restriction (max I/O toggle rate) ;
 ; 1501.5 MHz ; 250.0 MHz       ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -200,8 +205,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; S0     ; -3.242 ; -3.242           ;
-; BUTTON ; -1.000 ; -1.019           ;
+; S0     ; -5.564 ; -5.564           ;
+; A0     ; -2.996 ; -5.206           ;
+; BUTTON ; -1.007 ; -1.118           ;
 ; clock  ; 0.334  ; 0.000            ;
 +--------+--------+------------------+
 
@@ -211,8 +217,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+-----------------+
 ; Clock  ; Slack  ; End Point TNS   ;
 +--------+--------+-----------------+
-; S0     ; -0.270 ; -0.270          ;
-; BUTTON ; 0.323  ; 0.000           ;
+; A0     ; -0.319 ; -0.319          ;
+; BUTTON ; 0.324  ; 0.000           ;
+; S0     ; 0.329  ; 0.000           ;
 ; clock  ; 0.368  ; 0.000           ;
 +--------+--------+-----------------+
 
@@ -222,7 +229,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+--------+----------------------+
 ; Clock ; Slack  ; End Point TNS        ;
 +-------+--------+----------------------+
-; S0    ; -1.953 ; -1.953               ;
+; S0    ; -1.795 ; -1.795               ;
 +-------+--------+----------------------+
 
 
@@ -231,7 +238,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; S0    ; 0.852 ; 0.000                ;
+; S0    ; 0.922 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -242,6 +249,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+--------------------------------+
 ; BUTTON ; -3.000 ; -7.461                         ;
 ; clock  ; -3.000 ; -4.487                         ;
+; A0     ; -3.000 ; -3.000                         ;
 ; S0     ; -3.000 ; -3.000                         ;
 +--------+--------+--------------------------------+
 
@@ -257,8 +265,9 @@ No synchronizer chains to report.
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; S0     ; -0.783 ; -0.783           ;
-; BUTTON ; -0.549 ; -0.549           ;
+; A0     ; -1.585 ; -3.355           ;
+; S0     ; -1.431 ; -1.431           ;
+; BUTTON ; -0.584 ; -0.584           ;
 ; clock  ; 0.694  ; 0.000            ;
 +--------+--------+------------------+
 
@@ -268,7 +277,8 @@ No synchronizer chains to report.
 +--------+--------+-----------------+
 ; Clock  ; Slack  ; End Point TNS   ;
 +--------+--------+-----------------+
-; S0     ; -0.085 ; -0.085          ;
+; A0     ; -0.117 ; -0.131          ;
+; S0     ; 0.054  ; 0.000           ;
 ; BUTTON ; 0.151  ; 0.000           ;
 ; clock  ; 0.170  ; 0.000           ;
 +--------+--------+-----------------+
@@ -279,7 +289,7 @@ No synchronizer chains to report.
 +-------+-------+-----------------------+
 ; Clock ; Slack ; End Point TNS         ;
 +-------+-------+-----------------------+
-; S0    ; 0.014 ; 0.000                 ;
+; S0    ; 0.201 ; 0.000                 ;
 +-------+-------+-----------------------+
 
 
@@ -288,7 +298,7 @@ No synchronizer chains to report.
 +-------+-------+----------------------+
 ; Clock ; Slack ; End Point TNS        ;
 +-------+-------+----------------------+
-; S0    ; 0.361 ; 0.000                ;
+; S0    ; 0.301 ; 0.000                ;
 +-------+-------+----------------------+
 
 
@@ -297,9 +307,10 @@ No synchronizer chains to report.
 +--------+--------+--------------------------------+
 ; Clock  ; Slack  ; End Point TNS                  ;
 +--------+--------+--------------------------------+
-; BUTTON ; -3.000 ; -6.501                         ;
+; BUTTON ; -3.000 ; -6.508                         ;
 ; clock  ; -3.000 ; -4.153                         ;
-; S0     ; -3.000 ; -3.005                         ;
+; A0     ; -3.000 ; -4.104                         ;
+; S0     ; -3.000 ; -3.244                         ;
 +--------+--------+--------------------------------+
 
 
@@ -309,20 +320,22 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                           ;
-+------------------+--------+--------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -3.485 ; -0.293 ; -2.021   ; 0.361   ; -3.000              ;
-;  BUTTON          ; -1.117 ; 0.151  ; N/A      ; N/A     ; -3.000              ;
-;  S0              ; -3.485 ; -0.293 ; -2.021   ; 0.361   ; -3.000              ;
-;  clock           ; 0.261  ; 0.170  ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -4.716 ; -0.293 ; -2.021   ; 0.0     ; -14.948             ;
-;  BUTTON          ; -1.231 ; 0.000  ; N/A      ; N/A     ; -7.461              ;
-;  S0              ; -3.485 ; -0.293 ; -2.021   ; 0.000   ; -3.005              ;
-;  clock           ; 0.000  ; 0.000  ; N/A      ; N/A     ; -4.487              ;
-+------------------+--------+--------+----------+---------+---------------------+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -5.826  ; -0.319 ; -1.849   ; 0.301   ; -3.000              ;
+;  A0              ; -3.259  ; -0.319 ; N/A      ; N/A     ; -3.000              ;
+;  BUTTON          ; -1.148  ; 0.151  ; N/A      ; N/A     ; -3.000              ;
+;  S0              ; -5.826  ; 0.054  ; -1.849   ; 0.301   ; -3.000              ;
+;  clock           ; 0.261   ; 0.170  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -12.979 ; -0.319 ; -1.849   ; 0.0     ; -18.009             ;
+;  A0              ; -5.742  ; -0.319 ; N/A      ; N/A     ; -4.104              ;
+;  BUTTON          ; -1.411  ; 0.000  ; N/A      ; N/A     ; -7.461              ;
+;  S0              ; -5.826  ; 0.000  ; -1.849   ; 0.000   ; -3.244              ;
+;  clock           ; 0.000   ; 0.000  ; N/A      ; N/A     ; -4.487              ;
++------------------+---------+--------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -354,17 +367,17 @@ No synchronizer chains to report.
 +---------------------+-----------------------+-----------------+-----------------+
 ; Pin                 ; I/O Standard          ; 10-90 Rise Time ; 90-10 Fall Time ;
 +---------------------+-----------------------+-----------------+-----------------+
-; S1                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; S2                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; S1                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; S0                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; B2                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; A0                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; B0                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; A1                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; B1                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; A1                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; B0                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; A2                  ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; clock               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; BUTTON              ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; clock               ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TMS~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TCK~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_TDI~        ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
@@ -452,10 +465,12 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
+; A0         ; A0       ; 5        ; 5        ; 0        ; 0        ;
 ; BUTTON     ; BUTTON   ; 4        ; 1        ; 0        ; 0        ;
 ; clock      ; clock    ; 1        ; 0        ; 0        ; 0        ;
-; BUTTON     ; S0       ; 0        ; 0        ; 2        ; 0        ;
-; S0         ; S0       ; 0        ; 0        ; 6        ; 6        ;
+; A0         ; S0       ; 0        ; 0        ; 6        ; 5        ;
+; BUTTON     ; S0       ; 0        ; 0        ; 1        ; 0        ;
+; S0         ; S0       ; 0        ; 0        ; 2        ; 2        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -465,10 +480,12 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
+; A0         ; A0       ; 5        ; 5        ; 0        ; 0        ;
 ; BUTTON     ; BUTTON   ; 4        ; 1        ; 0        ; 0        ;
 ; clock      ; clock    ; 1        ; 0        ; 0        ; 0        ;
-; BUTTON     ; S0       ; 0        ; 0        ; 2        ; 0        ;
-; S0         ; S0       ; 0        ; 0        ; 6        ; 6        ;
+; A0         ; S0       ; 0        ; 0        ; 6        ; 5        ;
+; BUTTON     ; S0       ; 0        ; 0        ; 1        ; 0        ;
+; S0         ; S0       ; 0        ; 0        ; 2        ; 2        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -513,9 +530,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 83    ; 83   ;
+; Unconstrained Input Port Paths  ; 91    ; 91   ;
 ; Unconstrained Output Ports      ; 15    ; 15   ;
-; Unconstrained Output Port Paths ; 93    ; 93   ;
+; Unconstrained Output Port Paths ; 114   ; 114  ;
 +---------------------------------+-------+------+
 
 
@@ -524,6 +541,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------+--------+------+-------------+
 ; Target ; Clock  ; Type ; Status      ;
 +--------+--------+------+-------------+
+; A0     ; A0     ; Base ; Constrained ;
 ; BUTTON ; BUTTON ; Base ; Constrained ;
 ; S0     ; S0     ; Base ; Constrained ;
 ; clock  ; clock  ; Base ; Constrained ;
@@ -616,118 +634,128 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Mon Oct 01 21:42:33 2018
+    Info: Processing started: Tue Oct 02 09:55:43 2018
 Info: Command: quartus_sta EX1 -c EX1
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'EX1.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name clock clock
     Info (332105): create_clock -period 1.000 -name BUTTON BUTTON
+    Info (332105): create_clock -period 1.000 -name A0 A0
     Info (332105): create_clock -period 1.000 -name S0 S0
+    Info (332105): create_clock -period 1.000 -name clock clock
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.485
+Info (332146): Worst-case setup slack is -5.826
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.485              -3.485 S0 
-    Info (332119):    -1.117              -1.231 BUTTON 
+    Info (332119):    -5.826              -5.826 S0 
+    Info (332119):    -3.259              -5.742 A0 
+    Info (332119):    -1.148              -1.411 BUTTON 
     Info (332119):     0.261               0.000 clock 
-Info (332146): Worst-case hold slack is -0.293
+Info (332146): Worst-case hold slack is -0.229
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.293              -0.293 S0 
+    Info (332119):    -0.229              -0.229 A0 
     Info (332119):     0.361               0.000 BUTTON 
+    Info (332119):     0.366               0.000 S0 
     Info (332119):     0.412               0.000 clock 
-Info (332146): Worst-case recovery slack is -2.021
+Info (332146): Worst-case recovery slack is -1.849
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.021              -2.021 S0 
-Info (332146): Worst-case removal slack is 0.884
+    Info (332119):    -1.849              -1.849 S0 
+Info (332146): Worst-case removal slack is 0.980
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.884               0.000 S0 
+    Info (332119):     0.980               0.000 S0 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -7.461 BUTTON 
     Info (332119):    -3.000              -4.487 clock 
+    Info (332119):    -3.000              -3.000 A0 
     Info (332119):    -3.000              -3.000 S0 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -3.242
+Info (332146): Worst-case setup slack is -5.564
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.242              -3.242 S0 
-    Info (332119):    -1.000              -1.019 BUTTON 
+    Info (332119):    -5.564              -5.564 S0 
+    Info (332119):    -2.996              -5.206 A0 
+    Info (332119):    -1.007              -1.118 BUTTON 
     Info (332119):     0.334               0.000 clock 
-Info (332146): Worst-case hold slack is -0.270
+Info (332146): Worst-case hold slack is -0.319
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.270              -0.270 S0 
-    Info (332119):     0.323               0.000 BUTTON 
+    Info (332119):    -0.319              -0.319 A0 
+    Info (332119):     0.324               0.000 BUTTON 
+    Info (332119):     0.329               0.000 S0 
     Info (332119):     0.368               0.000 clock 
-Info (332146): Worst-case recovery slack is -1.953
+Info (332146): Worst-case recovery slack is -1.795
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.953              -1.953 S0 
-Info (332146): Worst-case removal slack is 0.852
+    Info (332119):    -1.795              -1.795 S0 
+Info (332146): Worst-case removal slack is 0.922
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.852               0.000 S0 
+    Info (332119):     0.922               0.000 S0 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000              -7.461 BUTTON 
     Info (332119):    -3.000              -4.487 clock 
+    Info (332119):    -3.000              -3.000 A0 
     Info (332119):    -3.000              -3.000 S0 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.783
+Info (332146): Worst-case setup slack is -1.585
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.783              -0.783 S0 
-    Info (332119):    -0.549              -0.549 BUTTON 
+    Info (332119):    -1.585              -3.355 A0 
+    Info (332119):    -1.431              -1.431 S0 
+    Info (332119):    -0.584              -0.584 BUTTON 
     Info (332119):     0.694               0.000 clock 
-Info (332146): Worst-case hold slack is -0.085
+Info (332146): Worst-case hold slack is -0.117
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.085              -0.085 S0 
+    Info (332119):    -0.117              -0.131 A0 
+    Info (332119):     0.054               0.000 S0 
     Info (332119):     0.151               0.000 BUTTON 
     Info (332119):     0.170               0.000 clock 
-Info (332146): Worst-case recovery slack is 0.014
+Info (332146): Worst-case recovery slack is 0.201
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.014               0.000 S0 
-Info (332146): Worst-case removal slack is 0.361
+    Info (332119):     0.201               0.000 S0 
+Info (332146): Worst-case removal slack is 0.301
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.361               0.000 S0 
+    Info (332119):     0.301               0.000 S0 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -6.501 BUTTON 
+    Info (332119):    -3.000              -6.508 BUTTON 
     Info (332119):    -3.000              -4.153 clock 
-    Info (332119):    -3.000              -3.005 S0 
+    Info (332119):    -3.000              -4.104 A0 
+    Info (332119):    -3.000              -3.244 S0 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Mon Oct 01 21:42:35 2018
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Tue Oct 02 09:55:48 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 
